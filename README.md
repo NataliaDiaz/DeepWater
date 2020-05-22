@@ -1,11 +1,8 @@
-# wave-simulator
-
-Main part of the work placed in [reposetory](https://github.com/manubatet/Ship-simulator).
-
-Take into account that it is not directly executed by python, it is executed by Blender. So instalation is needed.
+# Ship motion and wave simulator
 
 
-# INSTALATION
+
+# INSTALATION REQUIREMENTS
 
 # HOW TO INSTALL BLENDER (LINUX)
 (full version https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu)
@@ -20,7 +17,7 @@ Take into account that it is not directly executed by python, it is executed by 
     git submodule foreach git checkout master
     git submodule foreach git pull --rebase origin master
 
-- ### 1.1 If you want update Blender's source code to the latest development version. So in ~/blender-git/blender/
+- ### 1.1 If you want to update Blender' source code to the latest development version, in ~/blender-git/blender/ run:
 
     make update
 ## 2. Install/Update the dependencies
@@ -87,3 +84,6 @@ Generated data
 # Contact:
 
 Manuel Cortés Batet batetcortesm@gmail.com
+Nazar Mykola Kaminskyi nazar-mykola.kaminskyi@ensta-paris.fr
+Natalia Diaz Rodriguez natalia.diaz@ensta-paris.fr
+
