@@ -1,10 +1,10 @@
-# Ship motion and wave simulator
+# DeepWater: a Blender ship motion and wave simulator
 
 
 
-# INSTALATION REQUIREMENTS
+# Install requirements
 
-# HOW TO INSTALL BLENDER (LINUX)
+## 0 Install Blender (Linux)
 (full version https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu)
 
 ## 1 Get the source
@@ -20,6 +20,8 @@
 - ### 1.1 If you want to update Blender' source code to the latest development version, in ~/blender-git/blender/ run:
 
     make update
+    
+    
 ## 2. Install/Update the dependencies
   - ### 2.1 Recommended to use install_deps.sh script. To use it you are only required to install the following dependencies:
 
@@ -42,7 +44,7 @@
         cd ~/blender-git/blender
         make
 
-    - #### Once the build finishes you'll get a message like..
+    - #### Once the build finishes you'll get a message like:
 
           Blender successfully built, run from: /home/me/blender-git/build_linux/bin/blender
 
@@ -52,27 +54,33 @@
          make update
          make    
 
- # FINISH
+Your are done!
 
- ### BUT if you want Edit CMake Parameters go to https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu
+If you want to Edit the CMake Parameters go to https://wiki.blender.org/wiki/Building_Blender/Linux/Ubuntu
 
 
-# To run the script from terminal
+# To run the script from the terminal:
 (more info: https://learnsharewithdp.wordpress.com/2018/08/27/how-to-run-a-python-script-in-blender/)
 
     blender filename.blend --python script.py in our case
     blender ocean_render_2.blend --python 4macro.py
 
-# Files
+# Programs
 ## parameters.py
 Here you have all the parameters that the macro is goingo to import. You can select to iterate between several parameters. Those parameters are only choppiness, wave scale, wind velocity and random seed. Is not very difficult to add more parameters but those are the parameters that are more important to change the simulation. Here: https://docs.blender.org/manual/en/dev/modeling/modifiers/simulate/ocean.html you can find what does each parameter exactly do related to the ocean creation. The parameters about the render are clearly explained in the code.
 
 ## macro.py
-This is the macro. Theorically you will not need to change anything from here but there are some explanations inside about what the code does and I encourage you to improve the code and add more functions.
+The main script running the simulation, whose documentation indicates how to change diverse parameters (theorically you will not need to change anything here but the explanations inside will guide you to add different functions).
+
+## VideoMaker.py
+
+A sea wave video maker script that allows creating videos from frames from different episodes. You have to specify as input 1) the folder of the episode containing generated frames, and 2) the folder where you want to save the output video. For example, in order to save the video in the same path as the data folder, run:
+
+    python3 VideoMaker.py -i data/2021204820 -o data/20190421204820
 
 # Data
 
-Render 2 frames per second. This is the best option so that the differences between two frames are noticeable and they do not "duplicate" the information.
+Rendering 2 frames per second: This is the best option so that the differences between two frames are noticeable and there is no visual information duplication.
 
 Generated data
 
@@ -84,6 +92,8 @@ Generated data
 # Contact:
 
 Manuel Cortés Batet batetcortesm@gmail.com
+
 Nazar Mykola Kaminskyi nazar-mykola.kaminskyi@ensta-paris.fr
-Natalia Diaz Rodriguez natalia.diaz@ensta-paris.fr
+
+Natalia Diaz-Rodriguez natalia.diaz@ensta-paris.fr
 
